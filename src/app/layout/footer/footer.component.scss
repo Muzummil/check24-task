@@ -1,0 +1,30 @@
+.p-8 {
+  padding: 40px;
+}
+.footer-container {
+  color: var(--secondary-color);
+  margin-top: 2rem;
+}
+.bg-primary {
+  background-color: var(--primary-color);
+}
+.button-style {
+  padding: 12px 20px;
+  background-color: var(--btn-bg-color);
+  color: white;
+  border: none;
+}
+.input-email {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #4a4b4ceb;
+  color: white;
+}
+.invalid-input {
+  border: 1px solid red;
+}
+.valid-input {
+  border: none;
+}

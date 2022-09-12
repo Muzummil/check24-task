@@ -1,0 +1,58 @@
+<div class="teaser-container">
+  <!-- Start Teaser Images section -->
+  <div class="teaser-bg">
+    <div class="teaser-text text-center">
+      <div class="teaser-title">Finde dein perfektes Smartphone!</div>
+      <div class="teaser-sub-title">
+        Die besten Smartphone fur jedes budget!
+      </div>
+      <div>
+        <button
+          (click)="openModal()"
+          type="button"
+          class="button-style uppercase cursor-pointer"
+        >
+          Zum shop
+        </button>
+      </div>
+    </div>
+    <div>
+      <div class="flex justify-start items-center">
+        <div>
+          <app-img
+            imgName="main-teaser-left-side.png"
+            classes="mobile-img"
+          ></app-img>
+        </div>
+        <div>
+          <app-img
+            imgName="main-teaser-center.png"
+            classes="mobile-img"
+          ></app-img>
+        </div>
+        <div>
+          <app-img
+            imgName="main-teaser-side.png"
+            classes="mobile-img"
+          ></app-img>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Teaser Images section -->
+
+  <!-- Start Brand Images Section -->
+  <ng-container
+    *ngIf="{
+      brandsList: brandsList$ | async,
+      brandsListError: brandsListError$ | async
+    } as vm"
+  >
+    <app-brands
+      [dataList]="vm.brandsList ?? []"
+      [loading]="!vm.brandsList && !vm.brandsListError"
+      [errorMessage]="vm.brandsListError"
+    ></app-brands>
+  </ng-container>
+  <!-- End Brand Images Section -->
+</div>

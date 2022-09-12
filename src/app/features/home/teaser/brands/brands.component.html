@@ -1,0 +1,24 @@
+<!-- Start Showing Loader -->
+<div *ngIf="loading">Loading...</div>
+<!-- End Showing Loader -->
+
+<!-- Start Showing Data Section -->
+<div class="brands-container">
+  <ng-container *ngIf="!loading">
+    <div *ngIf="!dataList || dataList.length == 0" class="text-center">
+      {{ errorMessage ? errorMessage : "No Record Found" }}
+    </div>
+    <ng-container *ngIf="dataList">
+      <div class="flex justify-evenly items-center text-center">
+        <div class="flex1" *ngFor="let brand of dataList">
+          <app-img
+            imgName="{{ 'brands/' + brand.image + '.png' }}"
+            classes="brand-img"
+          ></app-img>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>
+
+<!-- End Showing Data Section -->

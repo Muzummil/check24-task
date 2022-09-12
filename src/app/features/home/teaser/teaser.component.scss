@@ -1,0 +1,37 @@
+.teaser-bg {
+  background-image: url("../../../../assets/images/slide-01-bg.jpg");
+  object-fit: contain;
+  background-size: 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  margin-top: 2rem;
+  padding-top: 3rem;
+  gap: 20px;
+}
+.teaser-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.teaser-title {
+  font-size: 26px;
+  font-weight: bold;
+}
+.teaser-sub-title {
+  font-size: 16px;
+  font-weight: 400;
+}
+.button-style {
+  padding: 8px 20px;
+  background-color: var(--btn-bg-color);
+  color: white;
+  border: none;
+}

@@ -1,0 +1,95 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/variables.scss";
+
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
+}
+.flex1 {
+  flex: 1;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-start {
+  align-items: flex-start;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.logo-text {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.logo-sub-text {
+  font-size: 12px;
+  font-weight: 400;
+}
+.gap-10 {
+  gap: 10px;
+}
+.gap-20 {
+  gap: 20px;
+}
+.color-primary {
+  color: var(--primary-color);
+}
+.color-secondary {
+  color: var(--secondary-color);
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.text-center {
+  text-align: center;
+}
+.logo-img {
+  width: 40px;
+}
+.font-bold {
+  font-weight: bold;
+}
+.w-100 {
+  width: 100%;
+}
+.mobile-img {
+  height: 130px;
+}
+.icon {
+  width: 16px;
+  height: 16px;
+}
+.page-container {
+  margin: auto;
+  margin-top: 2rem;
+  width: 80%;
+}
+button {
+  cursor: pointer;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
+.brand-img {
+  width: 60px;
+}
+.text-end {
+  text-align: end;
+}

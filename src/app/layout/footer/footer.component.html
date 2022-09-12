@@ -1,0 +1,39 @@
+<div class="footer-container flex justify-between items-center p-8 bg-primary">
+  <!-- Start Logo Text Left Section -->
+  <div>
+    <div class="flex flex-col justify-start items-start">
+      <div class="logo-text">Mobilo24</div>
+      <div class="logo-sub-text">Smartphone Online shop</div>
+    </div>
+  </div>
+  <!-- End Logo Text Left Section -->
+
+  <!-- Start Newsletter Right Section -->
+  <div>
+    <div class="flex flex-col justify-start items-start">
+      <div class="logo-text uppercase font-bold">Newsletter</div>
+      <div class="flex justify-start items-center">
+        <div>
+          <input
+            type="email"
+            class="input-email"
+            name="email"
+            email
+            ngModel
+            #email="ngModel"
+            [pattern]="emailValidationPattern"
+            required
+            placeholder="Enter email address"
+            [ngClass]="(email.touched && (email.errors?.['pattern'] || email.errors?.['required']) ? 'invalid-input' : 'valid-input')"
+          />
+        </div>
+        <div>
+          <button type="button" class="button-style uppercase cursor-pointer">
+            Eintragen
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Newsletter Right Section -->
+</div>

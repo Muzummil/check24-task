@@ -1,0 +1,51 @@
+<!-- Start Showing Loader -->
+<div *ngIf="loading">Loading...</div>
+<!-- End Showing Loader -->
+
+<!-- Start Showing Data Section -->
+<ng-container *ngIf="!loading">
+  <div *ngIf="!dataList || dataList.length == 0" class="text-center">
+    {{ errorMessage ? errorMessage : "No Record Found" }}
+  </div>
+  <ng-container *ngIf="dataList">
+    <div class="flex justify-start items-center">
+      <div
+        *ngFor="let mobileDetails of dataList"
+        class="mobile-card-container flex1"
+      >
+        <!-- Start Mobile Img Section -->
+        <div class="mobile-img-container">
+          <app-img
+            imgName="{{ 'phones/' + mobileDetails.image }}"
+            classes="mobile-img"
+          ></app-img>
+        </div>
+        <!-- End Mobile Img Section -->
+
+        <!-- Start Mobile Details Section -->
+        <div class="flex flex-col justify-start items-start gap-10">
+          <div class="ratings-container">
+            <app-ratings [rating]="mobileDetails.rating"></app-ratings>
+          </div>
+          <div>{{ mobileDetails.name }}</div>
+          <div
+            [ngClass]="{ 'cut-original-price': mobileDetails.price_reduced }"
+          >
+            {{ mobileDetails.price | currency: "EUR":"symbol" }}
+          </div>
+          <div class="h-18">
+            {{ mobileDetails.price_reduced | currency: "EUR":"symbol" }}
+          </div>
+          <div (click)="openModal()" class="w-100">
+            <button type="button" class="btn-primary">Bestsellen</button>
+          </div>
+          <div class="cursor-pointer">
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+          </div>
+        </div>
+        <!-- End Mobile Details Section -->
+      </div>
+    </div>
+  </ng-container>
+</ng-container>
+<!-- End Showing Data Section -->
